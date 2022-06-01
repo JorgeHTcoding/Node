@@ -20,28 +20,31 @@ function readConsole(pregunta) {
     return question
 }
 
-// readConsole('What is your name? ').then(name => {
-//     objeto.name = name;
-//     readConsole('What is your surname? ').then(surname => {
-//         objeto.surname = surname;
-//         readConsole('What is your age? ').then(age => {
-//             objeto.age = age;
+readConsole('What is your name? ')
+.then(name => {
+    objeto.name = name;
+    return readConsole('What is your surname? ')
+})
+.then(surname => {
+    objeto.surname = surname;
+    return readConsole('What is your age? ')
+})
+.then(age => {
+    objeto.age = age;
+    let stringObjeto = JSON.stringify(objeto);
+    return fs.writeFile("objetoR1.json", stringObjeto)
+})
 
-//             let stringObjeto = JSON.stringify(objeto);
+.then(() => {
+    return fs.readFile("objetoR1.json", "utf8",)
+    })
+.then(objeto => {
+    console.log(JSON.parse(objeto));
+    })
+.catch(err => {
+    console.log(err);
+    });
 
-//             fs.writeFile("objetoR1.json", stringObjeto)
-//                 .then(() => {
-//                 return fs.readFile("objetoR1.json", "utf8",)
-//                 })
-//                 .then(objeto => {
-//                     console.log(JSON.parse(objeto));
-//                 })
-//                 .catch(err => {
-//                     console.log(err);
-//                 });
-//         })
-//     })
-// })
 
 async function readConsoleAsy() {
     try {
