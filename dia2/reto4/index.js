@@ -7,4 +7,4 @@ let objeto = {name: "Jorge", surname: "Holgado", age: "29"};
 
 
 // readConsole.leerConsola()
-writeAndReadObject.writeAndRead("objetoWaRo",objeto);
+writeAndReadObject.writeAndRead("objetoR1",objeto);

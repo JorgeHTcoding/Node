@@ -2,6 +2,7 @@ const readline = require('readline');
 const fs = require('fs/promises');
 const { isAsyncFunction } = require('util/types');
 const { read } = require('fs');
+const { resolve } = require('path');
 
 
 let objeto2 = { name: " ", surname: " ", age: 0 };
@@ -21,29 +22,43 @@ function readConsole(pregunta) {
 }
 
 function leerConsola(){
-readConsole('What is your name? ').then(name => {
-    objeto2.name = name;
-    readConsole('What is your surname? ').then(surname => {
-        objeto2.surname = surname;
-        readConsole('What is your age? ').then(age => {
-            objeto2.age = age;
-
-            let stringObjeto = JSON.stringify(objeto2);
-
-            fs.writeFile("objetoRC.json", stringObjeto)
-                .then(() => {
-                return fs.readFile("objetoRC.json", "utf8",)
-                })
-                .then(objeto2 => {
-                    console.log(JSON.parse(objeto2));
-                })
-                .catch(err => {
-                    console.log(err);
-                });
+    const consoleReading = new Promise((resolve,reject) => {   
+        let boo2 = true;
+        if(boo2){      
+        let result = (readConsole('What is your name? ')
+        .then(name => {
+            objeto2.name = name;
+            return readConsole('What is your surname? ')
         })
-    })
-})
+        .then(surname => {
+            objeto2.surname = surname;
+            return readConsole('What is your age? ')
+        })
+        .then(age => {
+            objeto2.age = age;
+            let stringObjeto = JSON.stringify(objeto2);
+            return fs.writeFile("objetoR1.json", stringObjeto)
+        })
+        
+        .then(() => {
+            return fs.readFile("objetoR1.json", "utf8",)
+            })
+        .then(objeto2 => {
+            console.log(JSON.parse(objeto2));
+            })
+        .catch(err => {
+            console.log(err);
+            }))
+            resolve(result)
+        } else {
+            let err = console.log("err")
+            reject(err)
+        } 
+        return consoleReading
+    }) 
 }
+
+    
 
 // async function readConsoleAsy() {
 //     try {
