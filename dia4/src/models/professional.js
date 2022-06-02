@@ -1,9 +1,11 @@
 class Professional {
 
-    constructor(name, age, genre, weight, height, hairColor
+    constructor(name, surname, age, genre, weight, height, hairColor
         , eyeColor, race, isRetired, nationality, oscar, profession) {
 
+        
         this.name = name;
+        this.surname = surname;
         this.age = age;
         this.genre = genre;
         this.weight = weight;
@@ -18,7 +20,8 @@ class Professional {
 
     }
 
-    consolePrint() {
-        console.log(this);
-    }
+  
+    
 }
+
+    module.exports = {Professional}
