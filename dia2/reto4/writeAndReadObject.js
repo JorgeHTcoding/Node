@@ -39,5 +39,5 @@ function writeAndRead(path, objeto) {
         //         console.log(err);
         //     }
         // }
-    writeAndRead("objetoWARO",objeto)
+  
         module.exports = { writeAndRead };
