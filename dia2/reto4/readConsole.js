@@ -21,48 +21,46 @@ function readConsole(pregunta) {
     return question
 }
 
-function leerConsola() {    
-    const consoleReading = new Promise((resolve, reject) => {    
-    let objeto2 = { name: " ", surname: " ", age: 0 };
-        readConsole('What is your name? ')
-        .then(name => {
-            objeto2.name = name;
-            return readConsole('What is your surname? ')
-        })
-        .then(surname => {
-            objeto2.surname = surname;
-            return readConsole('What is your age? ')
-        })
-        .then(age => {
-            objeto2.age = age;
-            resolve(objeto2);
-        })        
-        .catch(err => {
-            reject(err)           
-        })         
-    } 
-    )    
-    return consoleReading
-}
+// function leerConsola() {    
+//     const consoleReading = new Promise((resolve, reject) => {    
+//     let objeto2 = { name: " ", surname: " ", age: 0 };
+//         readConsole('What is your name? ')
+//         .then(name => {
+//             objeto2.name = name;
+//             return readConsole('What is your surname? ')
+//         })
+//         .then(surname => {
+//             objeto2.surname = surname;
+//             return readConsole('What is your age? ')
+//         })
+//         .then(age => {
+//             objeto2.age = age;
+//             resolve(objeto2);
+//         })        
+//         .catch(err => {
+//             reject(err)           
+//         })         
+//     } 
+//     )    
+//     return consoleReading
+// }
  
 
+                    async function leerConsola() {
+                        let objeto = { name: " ", surname: " ", age: 0 };
+                        try {                                                    
+                            let name = await readConsole('What is your name? ');
+                            objeto.name = name;
+                            let surname = await readConsole('What is your surname? ');
+                            objeto.surname = surname;
+                            let age = await readConsole('What is your age? ');
+                            objeto.age = age;                                                        
+                        }
 
-
-
-                    // async function leerConsola() {
-                    //     let objeto = { name: " ", surname: " ", age: 0 };
-                    //     try {                                                    
-                    //         let name = await readConsole('What is your name? ');
-                    //         objeto.name = name;
-                    //         let surname = await readConsole('What is your surname? ');
-                    //         objeto.surname = surname;
-                    //         let age = await readConsole('What is your age? ');
-                    //         objeto.age = age;                            
-                    //     }
-
-                    //     catch (err) {
-                    //         console.log("err")
-                    //     }
-                    // }
+                        catch (err) {
+                            console.log("err")
+                        }
+                        return objeto;
+                    }
 
                     module.exports = { leerConsola };
