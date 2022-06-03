@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImdB</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="cuerpo">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-dark  navbar-expand-lg" style="background-color: #747C8F;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ImdB Addicts</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#linkCard">Recomendación del día</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#linkCartelera">Cartelera</a></li>
+                                <li><a class="dropdown-item" href="#accordionPanelsStayOpenExample">Películas</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#formLink">Aportaciones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- Carousel -->
+        <div class="row justify-content-center ">
+            <div class="col-md-6">
+                <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel" id="linkCartelera">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active ">
+                            <img src="/imdbresources/c1.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-black">
+                                <h5>Dune</h5>
+                                <p>Sumérgete en las arenas cargadas de Especia de Arrakis.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/imdbresources/c2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Leon el Profesional</h5>
+                                <p>Emotiva y excéntrica relación entre un asesino a sueldo y Matilda.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/imdbresources/c3.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="leon1">La Naranja Mecánica</h5>
+                                <p class="leon1">Cargada de "ultraviolencia" en una sociedad distópica Orweliana.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/imdbresources/c4.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>El Pianista</h5>
+                                <p>La supervivencia de un Músico judío durante Holocausto Nazi.</p>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- accordion -->
+        <div class="row justify-content-center ">
+            <div class="col-md-8">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                <div class="tituloPeli">Catálogo de Películas</div>
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <div class=catalogoPelis>
+                                    <div class="imagen" id="moviePicture"></div>
+                                    <div class="imagen" id="actorPicture"></div>
+                                    <p id="movieInfo"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+<!-- card -->
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card" style="width: 30rem;" id="linkCard">
+                    <img src="/imdbresources/card1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body" >
+                        <h5 class="card-title">El Quinto Elemento </h5>
+                        <p class="card-text">En el siglo XXIII, Korben Dallas, un ex agente de las fuerzas
+                            especiales
+                            que ahora ejerce como taxista,
+                            se encuentra atrapado en una lucha en la que tendrá que desafiar a un malvado que quiere
+                            destruir la Tierra.
+                            Cuando una misteriosa mujer entra en el asiento trasero de su taxi, todo da un giro
+                            inesperado.
+                            Él es perseguido por el gobierno y por un poderoso magnate reclutado por las fuerzas del
+                            Mal.
+                            Esta mujer pelirroja que acaba de conocer resultará ser la clave para la salvación de la
+                            Tierra, conocida como el quinto elemento.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Guion: Luc Besson, Robert Mark Kamen</li>
+                        <li class="list-group-item">Reparto: Bruce Willis, Gary Oldman, Mila Jojovich</li>
+                        <li class="list-group-item">Título original: The Fifth Element</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://www.youtube.com/watch?v=jtcSQsBYGmA" class="card-link">Trailer</a>
+                        <a href="https://es.wikipedia.org/wiki/El_quinto_elemento" class="card-link">Wiki</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/imdb.js"></script>
+    </div>
+    <div class="tituloForm">
+        <p>Aportaciones - Introduce los datos de la película que quieras subir</p>
+    </div>
+<div class="formulario">
+    <form class="row g-6 needs-validation" novalidate id="formLink">
+        <div class="col-md-2">
+          <label for="input01" class="form-label">Título</label>
+          <input type="text" class="form-control" id="input01"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-1">
+            <label for="input02" class="form-label">Género</label>
+            <input type="text" class="form-control" id="input02"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        <div class="col-md-1">
+          <label for="input03" class="form-label">Año</label>
+          <input type="text" class="form-control" id="input03"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-2">
+            <label for="input04" class="form-label">Actor principal</label>
+            <input type="text" class="form-control" id="input04"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+        </div>
+        <div class="col-md-1">
+          <label for="input05" class="form-label">Nacionalidad</label>
+          <input type="text" class="form-control" id="input05" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-2">
+            <label for="input06" class="form-label">Director</label>
+            <input type="text" class="form-control" id="input06"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="input07" class="form-label">Guionista</label>
+            <input type="text" class="form-control" id="input07"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-1">
+              <label for="input08" class="form-label">Idioma</label>
+              <input type="text" class="form-control" id="input08"  required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          </div>
+          <div class="col-md-1">
+            <label for="input09" class="form-label">Plataforma</label>
+            <input type="text" class="form-control" id="input09" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          
+          <div class="col-md-1">
+            <label for="input08" class="form-label">¿Marvel?</label>
+            <input type="text" class="form-control" id="input10"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+        </div>
+        <div class="col-md-1">
+            <label for="input09" class="form-label">Protagonista</label>
+            <input type="text" class="form-control" id="input11" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+        <div class="col-md-2">
+          <label for="input11" class="form-label">Productora</label>
+          <input type="text" class="form-control" id="input12" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>          
+        </div>
+        
+          <div class="col-md-1">
+            <label for="input09" class="form-label">Distribuidora</label>
+            <input type="text" class="form-control" id="input13" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="input09" class="form-label">URL portada</label>
+            <input type="text" class="form-control" id="input14" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="input09" class="form-label">URL retrato</label>
+            <input type="text" class="form-control" id="input15" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+        <div class="col-12">
+          <div class="form-check">                    
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>        
+        <div class="col-12">
+            <button type="reset" class="btn btn-primary" id="sendMovie" onclick="addMovie()">Submit</button>
+        </div>
+      </form>
+  
+    <script src="/imdb.js"></script>
+</body>
+
+</html>
