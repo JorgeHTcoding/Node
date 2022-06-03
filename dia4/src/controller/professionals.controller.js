@@ -68,26 +68,27 @@ function postProfessionals(request, response) {
 }
 
 function putProfessionals(request, response) {
-    let respuesta
-    if (professional != null) {
+    let respuesta    
+    let id = request.query.id
+    if (arrayProf[id] != null ) {
 
-            professional.name = request.body.name,
-            professional.surname = request.body.surname,
-            professional.age = request.body.age,
-            professional.genre = request.body.genre,
-            professional.weight = request.body.weight,
-            professional.height = request.body.height,
-            professional.hairColor = request.body.hairColor,
-            professional.eyeColor = request.body.eyeColor,
-            professional.race = request.body.race,
-            professional.isRetired = request.body.isRetired,
-            professional.nationality = request.body.nationality,
-            professional.oscar = request.body.oscar,
-            professional.profession = request.body.profession
+            arrayProf[id].name = request.body.name,
+            arrayProf[id].surname = request.body.surname,
+            arrayProf[id].age = request.body.age,
+            arrayProf[id].genre = request.body.genre,
+            arrayProf[id].weight = request.body.weight,
+            arrayProf[id].height = request.body.height,
+            arrayProf[id].hairColor = request.body.hairColor,
+            arrayProf[id].eyeColor = request.body.eyeColor,
+            arrayProf[id].race = request.body.race,
+            arrayProf[id].isRetired = request.body.isRetired,
+            arrayProf[id].nationality = request.body.nationality,
+            arrayProf[id].oscar = request.body.oscar,
+            arrayProf[id].profession = request.body.profession
 
         respuesta = {
             error: false, codigo: 200,
-            mensaje: 'Profesional actualizado', resultado: professional
+            mensaje: 'Profesional actualizado', resultado:  arrayProf[id]
         };
     }
     else

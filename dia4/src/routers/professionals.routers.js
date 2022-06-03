@@ -6,7 +6,7 @@ router.get("/", professionalsCtrl.getStart);
 
 router.get("/professionals", professionalsCtrl.getProfessionals);
 
-router.get("/professionals/:id", professionalsCtrl.getParams);
+// router.get("/professionals/:id", professionalsCtrl.getParams);
 
 router.post("/professionals",  professionalsCtrl.postProfessionals);
 
