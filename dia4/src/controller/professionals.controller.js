@@ -28,7 +28,7 @@ function getParams(request, response) {
             }
         }
     } else {
-        respuesta = { error: true, codigo: 200, mensaje: "El profesional no existe papáh" };
+        respuesta = { error: true, codigo: 200, mensaje: "El profesional no existe" };
     }
     response.send(respuesta);
 }
@@ -71,7 +71,8 @@ function putProfessionals(request, response) {
     let respuesta
     if (professional != null) {
 
-        professional.name = request.body.name,
+            professional.name = request.body.name,
+            professional.surname = request.body.surname,
             professional.age = request.body.age,
             professional.genre = request.body.genre,
             professional.weight = request.body.weight,
@@ -83,6 +84,7 @@ function putProfessionals(request, response) {
             professional.nationality = request.body.nationality,
             professional.oscar = request.body.oscar,
             professional.profession = request.body.profession
+
         respuesta = {
             error: false, codigo: 200,
             mensaje: 'Profesional actualizado', resultado: professional
