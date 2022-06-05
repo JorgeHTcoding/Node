@@ -1,27 +1,14 @@
 class Professional {
 
-    constructor(name, surname, age, genre, weight, height, hairColor
-        , eyeColor, race, isRetired, nationality, oscar, profession) {
+    constructor(name, surname, age, isRetired, profession) {
 
-        
         this.name = name;
         this.surname = surname;
-        this.age = age;
-        this.genre = genre;
-        this.weight = weight;
-        this.height = height;
-        this.hairColor = hairColor;
-        this.eyeColor = eyeColor;
-        this.race = race;
-        this.isRetired = isRetired;
-        this.nationality = nationality;
-        this.oscar = oscar;
+        this.age = age;             
+        this.isRetired = isRetired;       
         this.profession = profession;
 
-    }
-
-  
-    
-}
+    }     
+} 
 
     module.exports = {Professional}
