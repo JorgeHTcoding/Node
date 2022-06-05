@@ -6,11 +6,11 @@ router.get("/", professionalsCtrl.getStart);
 
 router.get("/professionals", professionalsCtrl.getProfessionals);
 
-// router.get("/professionals/:id", professionalsCtrl.getParams);
+router.get("/professionals/?id=", professionalsCtrl.getProfessionals);
 
 router.post("/professionals",  professionalsCtrl.postProfessionals);
 
-router.put("/professionals",  professionalsCtrl.putProfessionals);
+router.put("/professionals/",  professionalsCtrl.putProfessionals);
 
 router.delete("/professionals",  professionalsCtrl.deleteProfessionals)
 
