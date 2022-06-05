@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pokeapi.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="pokefetch.js"></script>
+    <title>Poke Happy</title>
+</head>
+
+<body>
+    <div class="cuerpo">
+        <div class="navegador">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <div class="imghead">
+                            <img src="https://i.ibb.co/86m7GZC/pikaball.png" alt="" width="100" height="100"
+                                class="d-inline-block align-text-top">
+                            <img src="https://i.ibb.co/LZgMTGD/pokehappy2.png" alt="" width="280" height="70"
+                                class="d-inline-block align-text-top">
+                            <img src="https://i.ibb.co/3F4TXC9/pikaball2.png" alt="" width="100" height="100"
+                                class="d-inline-block align-text-top">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <!-- tarjeta -->
+        <div class="inputcard">
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/originals/0f/1c/1e/0f1c1e34eec68e9a8aa8dcc7f2e39137.gif"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pokedex</h5>
+                    <p class="card-text">¡Introduce el nombre o el número del Pokemon para ver toda su información en la
+                        pokedex!</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre del Pokemon" aria-label="busqueda"
+                            aria-describedby="button-addon2" id="inputName">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Número en la Pokedex" aria-label="busqueda"
+                            aria-describedby="button-addon2" id="inputID">
+                    </div>
+                    <button class="btn btn-outline-secondary" type="reset" id="btnbuscar" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" onclick="getPokemon()">¡Buscar!</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast" class="toast position-fixed top-0 end-0 p-3 align-items-center text-white border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div id="toastText" class="toast-body">
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="cuerpopokedex">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">                  
+                        <div class="modal-body">
+                            <div class="inform">
+                            <div id="pokefoto"></div>
+                            <table id="pokeinfo">
+                                <audio id="audio" src="../frontend/sound.mp3"></audio>
+                            </table>
+                        </div>
+                        </div>
+                    </div>               
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
